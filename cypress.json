@@ -1,0 +1,11 @@
+{
+    "defaultCommandTimeout": 10000,
+    "reporterOptions": {
+        "reportDir": "cypress/reports",
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": false,
+        "inlineAssets": true
+      },
+      "video": false
+}
