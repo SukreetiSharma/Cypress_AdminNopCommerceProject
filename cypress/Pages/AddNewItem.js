@@ -9,13 +9,13 @@ class AddNewItem{
     Save ='//button[@title="Save"]';
     Submit = '//button[@name="save"]';
 
-   newItem(){
+   newItem(title,Description){
     cy.xpath(this.item).click();
     cy.xpath(this.Add).click();
-    cy.xpath(this.Title).type('HP Laptop')
-    cy.xpath(this.ShortDescription).type('Brand New HP Laptop');
+    cy.xpath(this.Title).type(title)
+    cy.xpath(this.ShortDescription).type(Description);
     cy.xpath(this.FullDescription).click();
-    cy.xpath(this.Type).type('HP Laptop');
+    cy.xpath(this.Type).type(title);
     cy.xpath(this.Save).click();
     cy.xpath(this.Submit).click();
    } 

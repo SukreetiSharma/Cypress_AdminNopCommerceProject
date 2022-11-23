@@ -5,12 +5,12 @@ class SearchMessageTemplate{
     search = "//button[@class='btn btn-primary btn-search']";
     BlogComment = "//td[contains(text(),'Blog.BlogComment')]";
 
-    searchKeyword(){
+    searchKeyword(Keyword){
         cy.xpath(this.MessageTemplate).click();
-        cy.xpath(this.keywords).type("Blog.BlogComment");
+        cy.xpath(this.keywords).type(Keyword);
         cy.xpath(this.search).click();
-        cy.xpath(this.BlogComment).should('contain','Blog.BlogComment');
+        cy.xpath(this.BlogComment).should('contain',Keyword);
     }
-    
+        
 }
 export default SearchMessageTemplate
